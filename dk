@@ -1,0 +1,27 @@
+#!/bin/bash
+
+deploy() {
+	echo "Deploying..."
+}
+
+build() {
+	echo "Building..."
+	docker build -t jekyllblog .
+}
+
+run() {
+	docker run -ti -v $PWD:/srv/jekyll -p "4000":"4000" jekyll/jekyll:stable bash
+}
+
+clear() {
+	echo "Clearing..."
+}
+
+refresh(){
+	clear
+	build
+	run
+}
+
+# Invoke the provided argument
+$@

@@ -5,25 +5,25 @@ highlight_color: '#3498db'
 
 # Profile links on the left sidebar, leave blank to ignore
 social:
-  github: swanson
+  github: dumconstantin
   #bitbucket: philipj
-  hacker_news: swanson
+  #hacker_news: swanson
   #stackexchange: 348619
   #stackoverflow: 348619
-  twitter: _swanson
+  twitter: dumconstantin
   #facebook: zuck
   #tumblr: animalygifs
   #linkedin: philipjagielski
   #gplus: 110552447039675960964
-  #gravatar: 86e6ff8f75f9daef42d53b7f8002fd95
+  gravatar: bfe0d5313fa79e10923f93081ffea10d
 
 # "Hi, I'm _______"
-name: Matt Swanson
-email: test@example.com
+name: Constantin Dumitrescu
+email: dum.constantin@gmail.com
 tagline: "weak opinions, strongly held"
 
 # Google Analytics key, leave blank to ignore
-google_analytics_key: UA-xxxx-x
+google_analytics_key: UA-67418725-1
 
 # Toggle "Postings are my own" disclaimer in footer
 show_disclaimer: true
