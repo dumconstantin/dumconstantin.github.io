@@ -8,7 +8,6 @@ deploy() {
 
 build() {
 	echo "Building..."
-	docker build -t jekyllblog .
 }
 
 run() {
