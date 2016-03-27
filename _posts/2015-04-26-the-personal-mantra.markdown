@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Personal Mantra"
+comments: true
 date: 2015-04-26 09:00:00
 categories: life
 ---

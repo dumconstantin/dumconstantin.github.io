@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Google Drive not starting on OSX"
+comments: true
 date: 2015-06-18 09:00:00
 categories: productivity
 ---

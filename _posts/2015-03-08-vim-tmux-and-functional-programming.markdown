@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Vim, Tmux and Functional Programming"
+comments: true
 date: 2015-03-08 09:00:00
 categories: general
 ---

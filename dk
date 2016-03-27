@@ -15,7 +15,7 @@ run() {
 	if [ "$is_image" != "" ]; then
 		docker start -ai $IMAGE_NAME
 	else
-		docker run -ti -v $PWD:/srv/jekyll -p "4000":"4000" --name $IMAGE_NAME jekyll/jekyll:stable jekyll serve
+		docker run -ti -v $PWD:/srv/jekyll -p "4000":"4000" --name $IMAGE_NAME jekyll/jekyll:stable jekyll serve --drafts
 	fi
 }
 

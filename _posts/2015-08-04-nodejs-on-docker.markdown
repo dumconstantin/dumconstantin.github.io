@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Nodejs on Docker"
+comments: true
 date: 2015-08-04 09:00:00
 categories: devops
 ---

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Micro modularized CSS framework"
+comments: true
 date: 2015-05-18 09:00:00
 categories: css
 ---

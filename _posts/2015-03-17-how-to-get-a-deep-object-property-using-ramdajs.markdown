@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "How to get a deep object property without recursivity using RamdaJs"
+comments: true
 date: 2015-03-17 09:00:00
 categories: functional-programming
 ---

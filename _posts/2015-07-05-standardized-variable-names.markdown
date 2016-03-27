@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Standardize variable names"
+comments: true
 date: 2015-06-18 09:00:00
 categories: functional_programming
 ---

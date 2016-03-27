@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Add RamdaJs functions to the prototype and global"
+comments: true
 date: 2015-06-19 09:00:00
 categories: functional_programming
 ---
