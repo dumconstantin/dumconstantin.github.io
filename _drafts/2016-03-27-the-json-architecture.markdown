@@ -87,3 +87,39 @@ A full list of routes can be deducted from the state tree given the dynamic node
 
 The visibility aspect of a component can be defined simple as `route('/login')` or they can host futher logic through `route('/login', ['user/authenticated'], (route, auth) => not(auth))
 
+
+
+## Definition of view, controller and model
+The view does no longer depend on controllers. It does not need to expose anything to the system as it is a sideeffect in itself. The view only needs to listen to state changes from the state object and react accordingly without any computation just proper transformation of data to fit the template.
+
+There is only one controller and one model exposed to the application. All changes that can ever happen in the application are contained solely in the controller. And any change that can ever happen will come only through the controller interface as a JSON patch.
+
+There is only one model that expresses the state of the application. The sub-models represent the branches of the state tree and are completely encapsulated by the state tree. They cannot rely on other sources of data but those found in the state tree.
+
+Controllers will always deliver essential state - state that cannot be derived from other state.
+Models will always deliver derived state from the essential state that is delivered by the controlers
+
+The structure of the essential state will be delivered by the JSON schema and thus ensuring a single source of truth regarding paths in the system.
+
+So the esential state is given by the JSON schema and is modified by JSON patches coming from controllers.
+Derived state is given by models and is used by either the Views or the Controllers.
+
+# The JSON Architecture changes the way development is being handled
+Developing with the JSON Architecture changes the way we imagine building an application. 
+
+Normally you are interested with the end points of the application - The API/The entry points in the application. You then normally enter gracefully in the application following the index method and finding your way through until the model - next the database schema then going back the path looking at the views and in the end you exit the entry point you came in initially. You repeat this process for other methods in the API until you can say you understand how the application works.
+
+Unfortunately, the way the application works is not necessary if you want to **understand** an application. What you really want is to see what it does, in the real world you are first interested in driving the car and the seeing under the hood what the engine does in order to move the car. Its an outside in approach, but we are fooled to think that working outside-in through the API is equivalent to an outside-in approach of understanding the application.
+
+No, we need to understand the end product of the application - which is the state that an application can have at a given moment. What if, at the first day of your new job, you are presented with the idle state of the application. You then proceed on doing actions and see how that state changes in its entirely, how new properties appear or dissapear while you do actions on the application. What if you could also change that state and see how the application behaves when you changed something. Did you break it? Change it back, reverse the state change, and see the application in an identical state as before.
+You don't need to understand the processes that make the transition between one state to the other, you ** only ** need to understand what the change is between an action and a reaction. You are doing a mental model on how the application behaves and not how the application works. This makes development intuitive.
+
+You see the application working and understand it better than if you would spend a month learning by heart the API. You can play with the application both from a user level and a programmer level, tweaking with values in the state tree and seeing how that change modifies the application. In some sense, application development becomes a game something fun for you to explore. Something that you can enjoy as you wonder "What will this do if I change it?" and then see the reaction.
+
+After you've played a bit like this with or without a small tutorial that shows you some of the more important states of the application - you then can go deeper and see what are the processes that made the state change like it did when you did that action. But the fun doesn't stop there, because each action is more or less self contained in a single place, in a file which you can tweak as you would - put logs in streams, delete stuff or add processing. Every time you make a change, you can see how the state is being modified after a certain action. You can even revert the change, modify the controller again and see what happens - it really becomes an experience of understandgin rather than a static learning experience.
+
+The effects of this is a greater sense of controller - nothing is out of reach, you fully understood the entire system just by playing with it. There are no hidden parts for you do figure out, everything is visibile from the change it does.
+
+The makes developers more productive - you develop an intuition on how the application will behave when you change the state in a certain way - you start developing intuitively and experimenting on the state tree - thus minimizing the likelyhood of introducing new bugs or architecture issues in the application.
+
+It makes it easy to introduce new developers to the development environment - the approach is not a diffcult process meant for seniors - it is a process of play where the developer learns gradually and becomes and expert in the system in a matter of days and not months or years as you would otherwise have.
