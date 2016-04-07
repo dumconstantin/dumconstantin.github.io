@@ -123,3 +123,16 @@ The effects of this is a greater sense of controller - nothing is out of reach, 
 The makes developers more productive - you develop an intuition on how the application will behave when you change the state in a certain way - you start developing intuitively and experimenting on the state tree - thus minimizing the likelyhood of introducing new bugs or architecture issues in the application.
 
 It makes it easy to introduce new developers to the development environment - the approach is not a diffcult process meant for seniors - it is a process of play where the developer learns gradually and becomes and expert in the system in a matter of days and not months or years as you would otherwise have.
+
+# A strong need for a tool for proper state management similiar to what I did with ``` baobab-json-editor ``` that can:
+- Track changes in state and be able to unwind and replay them
+- Freeze state and reject all patches
+- Pause the state and see the queue being formed with other patches.
+- Add a debugger before a patch is applied in order to investigate it and the source to which it came from
+-- This actually allows the developer to tweak the patch several times until it does what it should
+- Live view of what each patch does to the state (e.g. highlight fields - similar to the html inspector in chrome )
+- State properties definition. When you hover on a state property you should have a tooltip with a description of what that entity means
+- Be able to see all the patches applied, in sequence and be able to click on a patch and the state will be changed to when that patch was applied.
+- Be able to see where each patch originated from.
+- Be able to search through the patches.
+- Be able to export the patches array and be able to play them back somewhere else.
